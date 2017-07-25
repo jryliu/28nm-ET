@@ -1,0 +1,117 @@
+#et-data{
+  font-size: 12px;
+}
+.axis path,
+.axis line {
+  fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.dot {
+	stroke: white;
+}
+.tooltip {
+	position: absolute;
+	width: 230px;
+	height: auto;
+	pointer-events: none;
+	font-size: 12px;
+	padding: 2px;
+	color: white;
+	background: steelblue;
+}
+.tooltipmini{
+	position: absolute;
+	width: 315px;
+	height: auto;
+	/*pointer-events: none;*/
+	font-size: 12px;
+	padding: 2px;
+	color: white;
+	background: #eee;
+	/*background: steelblue;*/
+}
+.tooltipminihold{
+	position: absolute;
+	width: 315px;
+	height: auto;
+	/*pointer-events: none;*/
+	font-size: 12px;
+	padding: 2px;
+	color: white;
+	background: #eee;
+	/*background: steelblue;*/
+}
+.tooltipsvg{
+	position: absolute;
+	width: 500px;
+	height: auto;
+	font-size: 12px;
+	padding: 2px;
+	color: white;
+	background: #eee;
+}
+
+
+/* TESTING STUFF*/
+
+#scatter {
+	margin: auto;
+	padding: 0px;
+	height: 500px;
+	width: 900px;
+	text-align: center;
+}
+
+#pie {
+	margin: auto;
+	padding: 0px;
+	height: 500px;
+	width: 900px;
+	text-align: center;
+}
+
+/* Testing stuff over */
+
+#options {
+	width: 120px;
+	margin: auto;
+	height: 50px;
+	border-radius: 7px;
+	background-color: #eee;
+	box-shadow: 1px 1px 2px 0px #818181;
+	padding: 10px 10px 5px 10px;
+}
+
+
+/* Chart CSS */
+
+
+.charts {
+	font: 10px sans-serif;
+	text-align: center;
+	}
+
+.container button{
+	margin: auto;
+}
+
+.grid .tick{
+	stroke: lightgrey;
+	stroke-opacity: 0.8;
+	shape-rendering: crispEdges;
+}
+.grid path{
+	stroke-width: 0;
+}
+
+.bar {
+	fill: steelblue;
+}
+
+.line{
+	fill: none;
+	stroke: steelblue;
+	stroke-width: 2.5px;
+}
