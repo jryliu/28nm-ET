@@ -271,29 +271,6 @@ $(document).ready(function(){
 		else { console.log(error); throw error;}
 	});
 });
-function alertBadQuery(layer, device, option){
-	if( layer == null){
-		$("#testlayeroption").css("border-color", "red");
-		$("#formAlert").removeClass("hide");
-		$("#formAlert").slideDown(400);
-	}
-	if( device == null){
-		$("#processidoption").css("border-color", "red");
-		$("#formAlert").removeClass("hide");
-		$("#formAlert").slideDown(400);
-	}
-	if( option == null){
-		$("#itemidoption").css("border-color", "red");
-		$("#formAlert").removeClass("hide");
-		$("#formAlert").slideDown(400);
-	}
-}
-function resetBadQuery(layer, device, option){
-	$("#formAlert").addClass("hide");
-	$("#testlayeroption").css("border-color", "#ccc");
-	$("#processidoption").css("border-color", "#ccc");
-	$("#itemidoption").css("border-color", "#ccc");
-}
 function chartQuery() {
 	//Resized
 	width = $("#et-data").innerWidth() - margin.left - margin.right;
@@ -313,7 +290,6 @@ function chartQuery() {
 	var device = $("#processidoption").val();
 	var option = $("#itemidoption").val();
 	var optionName = $("#itemidoption :selected").text();
-	resetBadQuery(layer, device, option);
 	if (layer == "MF" && device != null && option != null) {
 		d3.csv("../RAWDATA/28nmET_DDI.csv", type_DDI, function(error, data) {
 			if (error) {
@@ -596,7 +572,7 @@ function chartQuery() {
 		});
 	}
 	else {
-		alertBadQuery(layer, device, option);
+		console.log("NO DATA");
 	}
 }
 function type_DDI(d) {
