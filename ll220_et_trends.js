@@ -39,7 +39,9 @@ var leftsvg = d3.select("#et-data")
 	.attr("height", height + margin.top + margin.bottom)
 	.attr("id", "leftsvg").append("g")
 	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-d3.selectAll("#query").on("click",chartQuery);
+d3.selectAll("#testlayeroption").on("change", chartQuery);
+d3.selectAll("#processidoption").on("change", chartQuery);
+d3.selectAll("#itemidoption").on("change", chartQuery);
 
 $(document).ready(function(){
 	$(".alert").find(".close").on("click", function(e){
@@ -334,13 +336,13 @@ function chartQuery() {
 
 				var join_data = leftsvg.selectAll(".dot").data(data.filter(function(d){return (device == "ALL" || device == d.PROCESS_ID)  ? d.time: null;}));
 				//exit() selection
-				join_data.exit().transition().duration(600).style("opacity",0).remove();
+				join_data.exit().transition().duration(600).ease("cubicInOut").style("opacity",0).remove();
 				/*d3.transition().duration(600).each(function(){
 					join_data.exit()
 						.transition().style("opacity",0).remove();
 				});*/
 				//update() section
-				join_data.transition().duration(600)
+				join_data.transition().duration(600).ease("cubicInOut")
 					.attr("cx", function(d){return x(d.time);})
 					.attr("cy", function (d) {return y(d[option]);})
 					.style("fill", function (d) {	return color20(d.PROCESS_ID);	});
@@ -474,13 +476,13 @@ function chartQuery() {
 
 				var join_data = leftsvg.selectAll(".dot").data(data.filter(function(d){return (device == "ALL" || device == d.PROCESS_ID)  ? d.time: null;}));
 				//exit() selection
-				join_data.exit().transition().duration(600).style("opacity",0).remove();
+				join_data.exit().transition().duration(600).ease("cubicInOut").style("opacity",0).remove();
 				/*d3.transition().duration(600).each(function(){
 					join_data.exit()
 						.transition().style("opacity",0).remove();
 				});*/
 				//update() section
-				join_data.transition().duration(600)
+				join_data.transition().duration(600).ease("cubicInOut")
 					.attr("cx", function(d){return x(d.time);})
 					.attr("cy", function (d) {return y(d[option]);})
 					.style("fill", function (d) {	return color20(d.PROCESS_ID);	});
