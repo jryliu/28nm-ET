@@ -271,6 +271,29 @@ $(document).ready(function(){
 		else { console.log(error); throw error;}
 	});
 });
+function alertBadQuery(layer, device, option){
+	if( layer == null){
+		$("#testlayeroption").css("border-color", "red");
+		$("#formAlert").removeClass("hide");
+		$("#formAlert").slideDown(400);
+	}
+	if( device == null){
+		$("#processidoption").css("border-color", "red");
+		$("#formAlert").removeClass("hide");
+		$("#formAlert").slideDown(400);
+	}
+	if( option == null){
+		$("#itemidoption").css("border-color", "red");
+		$("#formAlert").removeClass("hide");
+		$("#formAlert").slideDown(400);
+	}
+}
+function resetBadQuery(layer, device, option){
+	$("#formAlert").addClass("hide");
+	$("#testlayeroption").css("border-color", "#ccc");
+	$("#processidoption").css("border-color", "#ccc");
+	$("#itemidoption").css("border-color", "#ccc");
+}
 function chartQuery() {
 	//Resized
 	width = $("#et-data").innerWidth() - margin.left - margin.right;
@@ -290,6 +313,7 @@ function chartQuery() {
 	var device = $("#processidoption").val();
 	var option = $("#itemidoption").val();
 	var optionName = $("#itemidoption :selected").text();
+	resetBadQuery(layer, device, option);
 	if (layer == "MF" && device != null && option != null) {
 		d3.csv("../RAWDATA/28nmET_DDI.csv", type_DDI, function(error, data) {
 			if (error) {
@@ -310,7 +334,7 @@ function chartQuery() {
 
 				leftsvg.selectAll(".y.axis").call(yAxis).selectAll(".label").text(optionName);
 
-				var join_data = leftsvg.selectAll(".dot").data(data.filter(function(d){return (device == "ALL" || device == d.PROCESS_ID)  ? d.time: null;}));
+				var join_data = leftsvg.selectAll(".dot").data(data.filter(function(d){return (device == "ALL" || device == d.PROCESS_ID)  ? d.time: null;}), function(d){return d.date_lot.concat(d.WAFER_ID);});
 				//exit() selection
 				join_data.exit().transition().duration(600).ease("cubicInOut").style("opacity",0).remove();
 				/*d3.transition().duration(600).each(function(){
@@ -450,7 +474,7 @@ function chartQuery() {
 
 				leftsvg.selectAll(".y.axis").call(yAxis).selectAll(".label").text(optionName);
 
-				var join_data = leftsvg.selectAll(".dot").data(data.filter(function(d){return (device == "ALL" || device == d.PROCESS_ID)  ? d.time: null;}));
+				var join_data = leftsvg.selectAll(".dot").data(data.filter(function(d){return (device == "ALL" || device == d.PROCESS_ID)  ? d.time: null;}), function(d){return d.date_lot.concat(d.WAFER_ID);});
 				//exit() selection
 				join_data.exit().transition().duration(600).ease("cubicInOut").style("opacity",0).remove();
 				/*d3.transition().duration(600).each(function(){
@@ -572,7 +596,7 @@ function chartQuery() {
 		});
 	}
 	else {
-		console.log("NO DATA");
+		alertBadQuery(layer, device, option);
 	}
 }
 function type_DDI(d) {
