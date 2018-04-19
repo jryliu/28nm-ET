@@ -223,7 +223,7 @@
 												<li><a href="#">Yield SOC</a></li>
 												<li><a href="../14nm_yield_soc.html">Yield SOC - NPI</a></li>
 												<li><a href="../14NM/14nm_yield_table.html">Yield Table</a></li>
-											</ul> <!-- /.nav-third-level -->	
+											</ul> <!-- /.nav-third-level -->
 										</li>
 										<li class="active">
 											<a href="#">Established Nodes<span class="fa arrow"></span></a>
@@ -233,21 +233,21 @@
 													<ul class="nav nav-fourth-level">
 														<li><a class="active" href="../28nm_et_trends_inline.html">Legacy ET Trends</a></li>
 														<li><a href="../28nm_et_trends.html">ET Data</a></li>
-														<li><a href="PLY_chart_setup.html">Yield Trend</a></li>													
-													</ul> <!-- /.nav-fourth-level -->	
+														<li><a href="PLY_chart_setup.html">Yield Trend</a></li>
+													</ul> <!-- /.nav-fourth-level -->
 												</li>
 												<li>
 													<a href="#">32nm<span class="fa arrow"></span></a>
 													<ul class="nav nav-fourth-level">
 														<li><a href="../32nm_et_trends.html">ET Data</a></li>
-													</ul> <!-- /.nav-fourth-level -->	
+													</ul> <!-- /.nav-fourth-level -->
 												</li>
 												<li>
 													<a href="#">45nm<span class="fa arrow"></span></a>
 													<ul class="nav nav-fourth-level">
 														<li><a href="../45nm_et_trends.html">ET Data</a></li>
-													</ul>	<!-- /.nav-fourth-level -->	
-												</li>					
+													</ul>	<!-- /.nav-fourth-level -->
+												</li>
 											</ul> <!-- /.nav-third-level -->
 										</li>
 										<br>
@@ -296,7 +296,7 @@
 														<li><a href="../training%20files/Data%20Analysis/Paramatrix%20Reformatter-Auto%20Lot%20Report/Re-formatter%20for%2028nm%20MP%20ver11.xls"><i class="fa fa-file-powerpoint-o fa-fw"></i> Re-formatter for 28nm MP ver11</a></li>
 														<li><a href="../training%20files/Data%20Analysis/Paramatrix%20Reformatter-Auto%20Lot%20Report/Re-formatter%20for%2028nm%20MP%20ver12.xlsx"><i class="fa fa-file-powerpoint-o fa-fw"></i> Re-formatter for 28nm MP ver12</a></li>
 														<li><a href="../training%20files/Data%20Analysis/Paramatrix%20Reformatter-Auto%20Lot%20Report/Reformatter%20for%2032nm%20MP.xls"><i class="fa fa-file-powerpoint-o fa-fw"></i> Reformatter for 32nm MP</a></li>
-														<li><a href="../training%20files/Data%20Analysis/Paramatrix%20Reformatter-Auto%20Lot%20Report/Reformatter%20for%2045nm%20MP.xls"><i class="fa fa-file-powerpoint-o fa-fw"></i> Reformatter for 45nm MP</a></li>												
+														<li><a href="../training%20files/Data%20Analysis/Paramatrix%20Reformatter-Auto%20Lot%20Report/Reformatter%20for%2045nm%20MP.xls"><i class="fa fa-file-powerpoint-o fa-fw"></i> Reformatter for 45nm MP</a></li>
 													</ul> <!-- /.nav-fourth-level -->
 												</li>
 											</ul>	<!-- /.nav-third-level -->
@@ -391,90 +391,31 @@
 										<option value = "CIS"> CS28V </option>
 									</select>
 								</div> -->
-								<div class = "col-sm-2 query" id = "option1">
+								<div class = "col-sm-2 col-md-2 query" id = "option1">
 									<select class = "form-control" id = "testlayeroption" >
-										<option selected disabled hidden value = ""> Layer </option>
-										<option value = "MF"> MF </option>
+										<!-- <option selected disabled hidden value = ""> Layer </option> -->
+										<option selected value = "MF"> MF </option>
 										<option value = "M1"> M1 </option>
 									</select>
 								</div>
-								<div class = "col-sm-3 query" id = "option2">
+								<div class = "col-sm-3 col-md-3 query" id = "option2">
 									<select class = "form-control" id = "processidoption">
-										<option selected disabled hidden value = ""> Process ID </option>
-										<option value = "ALL"> All </option>
-										<option value = "UX27"> UX27 </option>
-										<option value = "UX39"> UX39 </option>
-										<option value = "UX73"> UX73 </option>
-										<option value = "UX93"> UX93 </option>
-										<option value = "UXA8"> UXA8 </option>
-										<option value = "UXB8"> UXB8 </option>
-										<option value = "UX27"> UX27 </option>
-										<option value = "UX2D"> UX2D </option>
-										<option value = "UXIL"> UXIL </option>
-										<option value = "UX73"> UX73 </option>
-										<option value = "UXC7"> UXC7 </option>
-										<option value = "UXJS"> UXJS </option>
-										<option value = "UXJL"> UXJL </option>
-										<option value = "UXN9"> UXN9 </option>
+										<!-- <option selected disabled hidden value = ""> Process ID </option> -->
+										<option selected value = "ALL" > All </option>
 									</select>
 								</div>
-								<div class = "col-sm-4 query" id = "option3">
-								
+								<div class = "col-sm-3 col-md-3 query" id = "option3">
+
 									<select class = "form-control" id = "itemidoption">
 										<option selected disabled hidden value = ""> Item ID </option>
-										<option value = "D120_PU_Idsat"> D120 SRAM PU Idsat </option>
-										<option value = "D120_PU_Vtsat"> D120 SRAM PU Vtsat </option>
-										<option value = "D120_PD_Idsat"> D120 SRAM PD Idsat </option>
-										<option value = "D120_PD_Vtsat"> D120 SRAM PD Vtsat </option>
-										<option value = "D120_PG_Idsat"> D120 SRAM PG Idsat </option>
-										<option value = "D120_PG_Vtsat"> D120 SRAM PG Vtsat </option>
-										<option value = "D120_SNMR"> D120 SRAM SNMR </option>
-										<option value = "D120_lat_IRD_L"> D120 L Iread </option>
-										<option value = "H152_PU_Vtsat"> H152 SRAM PU Vtsat </option>
-										<option value = "H152_PD_Vtsat"> H152 SRAM PD Vtsat </option>
-										
-										<option value = "EGN_Sh_Ch_Vtsat"> EG N Short Ch. Vtsat </option>
-										<option value = "EGP_Sh_Ch_Vtsat"> EG P Short Ch. Vtsat </option>
-										<option value = "EGN_Long_Ch_Vtlin"> EG N Long Ch. Vtlin </option>
-										<option value = "EGP_Long_Ch_Vtlin"> EG P Long Ch. Vtlin</option>
-										
-										<option value = "LVTN_Short_Ch_Vtsat"> LVT N Short Ch. Vtsat </option>
-										<option value = "LVTP_Short_Ch_Vtsat"> LVT P Short Ch. Vtsat </option>
-										
-										<option value = "RVTN_Short_Ch_Vtsat"> RVT N Short Ch. Vtsat </option>
-										<option value = "RVTP_Short_Ch_Vtsat"> RVT P Short Ch. Vtsat </option>
-										<option value = "RVTN_Long_Ch_Vtlin"> RVT N Long Ch. Vtlin </option>
-										<option value = "RVTP_Long_Ch_Vtlin"> RVT P Long Ch. Vtlin </option>
-										
-										<option value = "SLVTN_Short_Ch_Vtsat"> SLVT N Short Ch. Vtsat </option>
-										<option value = "SLVTN_Long_Ch_Vtlin"> SLVT N Long Ch. Vtlin </option>
-										<option value = "SLVTP_Short_Ch_Vtsat"> SLVT P Short Ch. Vtsat </option>
-										<option value = "SLVTP_Long_Ch_Vtlin"> SLVT P Long Ch. Vtlin </option>
-										
-										<option value = "Leff_N"> Leff N </option>
-										<option value = "Leff_P"> Leff P </option>
-										<option value = "LPoly_N"> Lpoly N </option>
-										<option value = "LPoly_P"> Lpoly P </option>
-										<option value = "OP_NRX"> OP N RX </option>
-										<option value = "OP_PPC"> OP P PC </option>
-										
-										<option value = "LVT_SUM"> LVt Sum </option>
-										<option value = "RVT_SUM"> RVt Sum </option>
-										<option value = "SGN_TOX"> SG N TOx </option>
-										<option value = "SGP_TOX"> SG P TOx </option>
-										
-										<option value = "RVTN_COV"> RVT N COv </option>
-										<option value = "RVTP_COV"> RVT P COv </option>
-										<option value = "VPNP_BETA"> PNP BJT Beta </option>
 									</select>
 								</div>
 								<div class = "col-sm-2 alert alert-danger hide" id = "formAlert">
 									<a class = "close"> x </a>
 									Please select an option in all fields
 								</div>
-								<button type="submit" class = "btn btn-default" onclick = chartQuery()> Query </button>
 								<div class = "row">
-									<div class = "col-lg-12">
+									<div class = "col-lg-12 ">
 										<div class = "panel panel-default">
 											<div class = "panel-body">
 												<div class = "col-sm-12" id = "et-data"></div>
@@ -484,7 +425,7 @@
 								</div>
 							</div>
 									<!-- Nav tabs -->
-							
+
 						</div>
 					</div>
 				</div>
@@ -502,12 +443,12 @@
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<!-- Metis Menu Plugin JavaScript -->
 		<script src="vendor/metisMenu/metisMenu.min.js"></script>
-	
+
 		<!-- Morris Charts JavaScript -->
 		<script src="vendor/raphael/raphael.min.js"></script>
 		<script src="vendor/morrisjs/morris.min.js"></script>
 		<script src="data/morris-data.js"></script>
-	
+
 		<!-- DataTables JavaScript -->
 		<script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
 		<script src="vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
