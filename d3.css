@@ -11,15 +11,16 @@
 .dot {
 	stroke: white;
 }
-.tooltip {
-	position: absolute;
-	width: 230px;
+.tooltip_pareto {
+  position: absolute;
+	width: 50px;
 	height: auto;
-	pointer-events: none;
+	/*pointer-events: none;*/
 	font-size: 12px;
 	padding: 2px;
 	color: white;
-	background: steelblue;
+	background: #eee;
+	/*background: steelblue;*/
 }
 .tooltipmini{
 	position: absolute;
@@ -83,10 +84,7 @@
 	box-shadow: 1px 1px 2px 0px #818181;
 	padding: 10px 10px 5px 10px;
 }
-
-
 /* Chart CSS */
-
 
 .charts {
 	font: 10px sans-serif;
@@ -114,4 +112,11 @@
 	fill: none;
 	stroke: steelblue;
 	stroke-width: 2.5px;
+}
+svg{
+  font: 12px;
+}
+.bar rect{
+  fill:steelblue;
+  shape-rendering: crispEdges;
 }
